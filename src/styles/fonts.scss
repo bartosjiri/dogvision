@@ -1,6 +1,87 @@
-$font-family-01: '@TODO';
+$font-family-01: 'Fixel Text';
 
 :root {
 	--font-family-01: #{$font-family-01}, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
 		'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+@font-face {
+	font-family: $font-family-01;
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/FixelText-Thin.woff2') format('woff2'),
+		url('/fonts/FixelText-Thin.tff') format('tff');
+}
+
+@font-face {
+	font-family: $font-family-01;
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/FixelText-ExtraLight.woff2') format('woff2'),
+		url('/fonts/FixelText-ExtraLight.tff') format('tff');
+}
+
+@font-face {
+	font-family: $font-family-01;
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/FixelText-Light.woff2') format('woff2'),
+		url('/fonts/FixelText-Light.tff') format('tff');
+}
+
+@font-face {
+	font-family: $font-family-01;
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/FixelText-Regular.woff2') format('woff2'),
+		url('/fonts/FixelText-Regular.tff') format('tff');
+}
+
+@font-face {
+	font-family: $font-family-01;
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/FixelText-Medium.woff2') format('woff2'),
+		url('/fonts/FixelText-Medium.tff') format('tff');
+}
+
+@font-face {
+	font-family: $font-family-01;
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/FixelText-SemiBold.woff2') format('woff2'),
+		url('/fonts/FixelText-SemiBold.tff') format('tff');
+}
+
+@font-face {
+	font-family: $font-family-01;
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/FixelText-Bold.woff2') format('woff2'),
+		url('/fonts/FixelText-Bold.tff') format('tff');
+}
+
+@font-face {
+	font-family: $font-family-01;
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/FixelText-ExtraBold.woff2') format('woff2'),
+		url('/fonts/FixelText-ExtraBold.tff') format('tff');
+}
+
+@font-face {
+	font-family: $font-family-01;
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/FixelText-Black.woff2') format('woff2'),
+		url('/fonts/FixelText-Black.tff') format('tff');
 }
