@@ -95,10 +95,12 @@
 		box-shadow: none;
 		outline: none;
 
-		&:hover {
-			color: var(--color-foreground-hover);
-			background: var(--color-background-hover);
-			border-color: var(--color-border-hover);
+		@media (hover: hover) {
+			&:hover {
+				color: var(--color-foreground-hover);
+				background: var(--color-background-hover);
+				border-color: var(--color-border-hover);
+			}
 		}
 
 		:global(span) {

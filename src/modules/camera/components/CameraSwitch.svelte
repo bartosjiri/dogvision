@@ -4,7 +4,7 @@
 
 	import { Button, Tooltip } from '$lib/primitives';
 
-	import { cameraActive } from '$modules/camera';
+	import { cameraActive, switchCamera } from '$modules/camera';
 
 	import { HEADER_BUTTON_TOOLTIP_CONFIG } from '$lib/layout/header';
 
@@ -22,7 +22,13 @@
 		if (!$cameraActive) e.preventDefault();
 	}}
 >
-	<Button icon={SwitchCamera} size="large" variant="ghost" disabled={!$cameraActive} />
+	<Button
+		on:click={switchCamera}
+		icon={SwitchCamera}
+		size="large"
+		variant="ghost"
+		disabled={!$cameraActive}
+	/>
 </div>
 
 {#if $open && $cameraActive}

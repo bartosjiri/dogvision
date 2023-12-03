@@ -3,8 +3,6 @@ import { get } from 'svelte/store';
 import { filterElement as filterElementStore, filterActive } from '../stores/filter.store';
 import {
 	cameraElement as cameraElementStore,
-	cameraWidth as cameraWidthStore,
-	cameraHeight as cameraHeightStore,
 	cameraActive as cameraActiveStore
 } from '$modules/camera';
 
@@ -23,13 +21,11 @@ export const startFilter = () => {
 		if (!cameraActive) return;
 
 		const cameraElement = get(cameraElementStore);
-		const cameraWidth = get(cameraWidthStore);
-		const cameraHeight = get(cameraHeightStore);
 
 		canvasElement.width = cameraElement?.clientWidth || 0;
 		canvasElement.height = cameraElement?.clientHeight || 0;
 
-		if (!cameraElement || !cameraWidth || !cameraHeight) {
+		if (!cameraElement) {
 			requestAnimationFrame(modifyFrame);
 			return;
 		}

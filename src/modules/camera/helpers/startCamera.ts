@@ -5,11 +5,12 @@ import { addToast } from '$lib/primitives';
 
 import {
 	cameraElement as cameraElementStore,
+	cameraFacingMode,
 	cameraLoading,
 	cameraActive
 } from '../stores/camera.store';
 
-export const startCamera = async () => {
+export const startCamera = async ({ initFilter = true }) => {
 	try {
 		cameraLoading.set(true);
 
@@ -21,7 +22,8 @@ export const startCamera = async () => {
 		const mediaStream = await navigator.mediaDevices.getUserMedia({
 			audio: false,
 			video: {
-				width: { ideal: 1920 }
+				// @NOTE: Ideally, this should set some width and height relevant to the device's screen size (mind resizing and browser compatibility)
+				facingMode: get(cameraFacingMode)
 			}
 		});
 
@@ -31,7 +33,7 @@ export const startCamera = async () => {
 		cameraActive.set(true);
 		cameraLoading.set(false);
 
-		startFilter();
+		if (initFilter) startFilter();
 	} catch (err) {
 		if (import.meta.env.DEV) {
 			console.error('[@DEBUG] Error accessing the camera:', err);

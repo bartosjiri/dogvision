@@ -7,8 +7,6 @@
 
 	import { cameraLoading, cameraActive } from '../stores/camera.store';
 	import { visorActive } from '$lib/primitives/logo';
-
-	$: if ($cameraLoading) $visorActive = true;
 </script>
 
 {#if !$cameraActive}
@@ -18,7 +16,7 @@
 			<p>An&nbsp;app for&nbsp;visualizing<br /> a&nbsp;dog's color&nbsp;perception</p>
 		</div>
 		<Button
-			on:click={startCamera}
+			on:click={() => startCamera({})}
 			on:mouseover={() => ($visorActive = true)}
 			on:mouseleave={() => {
 				if (!$cameraLoading) $visorActive = false;
