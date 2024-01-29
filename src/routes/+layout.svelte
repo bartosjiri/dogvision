@@ -14,9 +14,7 @@
 <PageMeta />
 <FathomAnalytics />
 
-<main>
-	<slot />
-</main>
+<slot />
 <Header>
 	<AboutToggle />
 	<div class:divider={true} />
@@ -26,12 +24,12 @@
 </Header>
 
 <style lang="scss">
-	main {
+	:global(main) {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		height: 100vh;
+		height: 100%;
 		margin: 0 auto;
 	}
 </style>

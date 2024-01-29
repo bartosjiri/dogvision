@@ -19,7 +19,7 @@
 		</div>
 	</div>
 	<div class:footnotes={true}>
-		<a href="https://bartosjiri.com" target="_blank">A project by bartosjiri_</a>
+		<a href="https://bartosjiri.com" target="_blank">A project by bartosjiri</a>
 		<a href="https://github.com/bartosjiri/dogvision" target="_blank">
 			Open-sourced code, contribute on GitHub
 		</a>
