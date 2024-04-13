@@ -7,7 +7,7 @@
 <div class:camera={true}>
 	<CameraRequest />
 	<!-- svelte-ignore a11y-media-has-caption -->
-	<video bind:this={$cameraElement} autoplay muted disablePictureInPicture />
+	<video bind:this={$cameraElement} autoplay muted playsinline disablePictureInPicture />
 </div>
 
 <style lang="scss">
