@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { PageMeta } from '$util/meta';
-	import { FathomAnalytics } from '$util/fathom-analytics';
+	import { UmamiAnalytics } from '$util/umami-analytics';
 
 	import { Header } from '$lib/layout/header';
 
@@ -12,7 +12,7 @@
 </script>
 
 <PageMeta />
-<FathomAnalytics />
+<UmamiAnalytics />
 
 <slot />
 <Header>
